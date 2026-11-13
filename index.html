@@ -1,14 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>아멘교회 UKY 청년부</title>
-  <!-- 아래 '여기에_웹앱_주소' 세 군데를 앱스크립트 웹 앱 주소(https://script.google.com/macros/s/.../exec)로 바꿔 주세요 -->
-  <meta http-equiv="refresh" content="0; url=여기에_웹앱_주소">
-  <script>location.replace('여기에_웹앱_주소');</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Seven Knights</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<meta name="theme-color" content="#1a1a1d">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Seven Knights">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+html,body{margin:0;height:100%;background:#1a1a1d;overflow:hidden}
+iframe{position:fixed;inset:0;width:100%;height:100%;border:0;background:#1a1a1d}
+</style>
 </head>
 <body>
-  <p><a href="여기에_웹앱_주소">앱으로 이동</a></p>
+<iframe id="app" allow="autoplay; fullscreen; encrypted-media"></iframe>
+<script>
+/* 여기에 Apps Script 웹앱 주소(…/exec)를 넣으세요 */
+var APP_URL = 'https://script.google.com/macros/s/AKfycbyh-EqX0wZzfDyXZrXm3bgUcvfU35zPdW4yDDqzu1NSrc_ac5F6MhP9IPMwYDYtBz0-pA/exec';
+document.getElementById('app').src = APP_URL;
+</script>
 </body>
 </html>
