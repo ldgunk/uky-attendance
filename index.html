@@ -1,21 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>아멘교회 UKY 청년부</title>
-  <script>
-    var APP = 'https://script.google.com/macros/s/AKfycbzuKEukvp13rvRnhV0D02gfxw3xbMGRfWS-lRXw4nntE6Zjmu0aeZjfjZAVZeN3TrV6/exec';
-    if (/KAKAOTALK/i.test(navigator.userAgent || '')) {
-      /* 카카오톡 인앱 브라우저(아이폰·갤럭시 공통) → 기본 브라우저로 열기 */
-      location.href = 'kakaotalk://web/openExternal?url=' + encodeURIComponent(APP);
-    } else {
-      location.replace(APP);
-    }
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Seven Knights</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<meta name="theme-color" content="#0a0a0b">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Seven Knights">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+html,body{margin:0;height:100%;background:#0a0a0b;overflow:hidden;overscroll-behavior:none}
+iframe{position:fixed;left:0;right:0;bottom:0;top:env(safe-area-inset-top,0px);width:100%;height:calc(100% - env(safe-area-inset-top,0px));height:calc(100dvh - env(safe-area-inset-top,0px));border:0;background:#0a0a0b}
+</style>
 </head>
-<body style="font-family:sans-serif;text-align:center;padding:48px 16px">
-  <p>앱으로 이동 중이에요…</p>
-  <p><a href="https://script.google.com/macros/s/AKfycbzuKEukvp13rvRnhV0D02gfxw3xbMGRfWS-lRXw4nntE6Zjmu0aeZjfjZAVZeN3TrV6/exec">자동으로 안 넘어가면 여기를 눌러 주세요</a></p>
+<body>
+<iframe id="app" allow="autoplay; fullscreen; encrypted-media"></iframe>
+<script>
+/* 여기에 Apps Script 웹앱 주소(…/exec)를 넣으세요 */
+var APP_URL = 'https://script.google.com/macros/s/AKfycbyh-EqX0wZzfDyXZrXm3bgUcvfU35zPdW4yDDqzu1NSrc_ac5F6MhP9IPMwYDYtBz0-pA/exec';
+document.getElementById('app').src = APP_URL;
+</script>
 </body>
 </html>
