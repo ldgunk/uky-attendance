@@ -2,26 +2,19 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>아멘교회 UKY 청년부</title>
-  <script>
-    var APP = 'https://script.google.com/macros/s/AKfycbzuKEukvp13rvRnhV0D02gfxw3xbMGRfWS-lRXw4nntE6Zjmu0aeZjfjZAVZeN3TrV6/exec';
-    var ua = navigator.userAgent || '';
-    if (/KAKAOTALK/i.test(ua)) {
-      /* 카카오톡 인앱 브라우저 → 기본 브라우저(Safari/Chrome)로 열기 */
-      if (/Android/i.test(ua)) {
-        location.href = 'intent://' + APP.replace(/^https?:\/\//, '') + '#Intent;scheme=https;package=com.android.chrome;end';
-      } else {
-        location.href = 'kakaotalk://web/openExternal?url=' + encodeURIComponent(APP);
-      }
-    } else {
-      location.replace(APP);
-    }
-  </script>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" href="apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="UKY 청년부">
+  <style>
+    html,body{margin:0;height:100%;background:#f4f5f7}
+    iframe{position:fixed;inset:0;width:100%;height:100%;border:0;background:#f4f5f7}
+  </style>
 </head>
-<body style="font-family:sans-serif;text-align:center;padding:48px 16px">
-  <p>앱으로 이동 중이에요…</p>
-  <p><a href="https://script.google.com/macros/s/AKfycbzuKEukvp13rvRnhV0D02gfxw3xbMGRfWS-lRXw4nntE6Zjmu0aeZjfjZAVZeN3TrV6/exec">자동으로 안 넘어가면 여기를 눌러 주세요</a></p>
-  <p style="color:#888;font-size:13px">카카오톡에서 열었다면 오른쪽 아래 공유 버튼 → Safari로 열기를 눌러 주세요.</p>
+<body>
+  <iframe id="app" src="https://script.google.com/macros/s/AKfycbzuKEukvp13rvRnhV0D02gfxw3xbMGRfWS-lRXw4nntE6Zjmu0aeZjfjZAVZeN3TrV6/exec" allow="clipboard-write" title="아멘교회 UKY 청년부"></iframe>
 </body>
 </html>
